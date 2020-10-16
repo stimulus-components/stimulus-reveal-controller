@@ -5,7 +5,7 @@
 [![](https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
 [![](https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Test/badge.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-reveal-controller.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c21b3ca7-40fa-4de3-aad5-56dbc343ace6/deploy-status)](https://stimulus-reveal-controller.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83f0dddb-31fa-4025-a04f-dd26f153d646/deploy-status)](https://stimulus-reveal-controller.netlify.com)
 
 ## Getting started
 
