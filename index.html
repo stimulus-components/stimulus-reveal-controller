@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Stimulus Reveal Controller</title>
+    <script type="module" src="./src/index.js" defer></script>
+    <script src="https://unpkg.com/stimulus/dist/stimulus.umd.js" defer></script>
+
+    <script type="module" defer>
+      import Reveal from './src/index.js'
+
+      const application = Stimulus.Application.start()
+      application.register('reveal', Reveal)
+    </script>
+
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      a {
+        color: #667eea;
+        display: inline-block;
+      }
+
+      .badges a {
+        margin: 0 0.25rem;
+      }
+
+      pre code {
+        border-radius: 0.5rem;
+        text-align: left;
+        font-family: Menlo, 'Courier New', Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-full max-w-6xl mx-auto my-24 p-4">
+      <h1 class="text-center mb-8 text-5xl font-bold">Stimulus Reveal Controller</h1>
+
+      <p class="text-center mb-4">
+        A Stimulus controller to toggle a class on one or multiple items to show or hide them.
+      </p>
+
+      <p class="text-center badges">
+        <a href="https://www.npmjs.com/package/stimulus-reveal-controller">
+          <img src="https://img.shields.io/npm/dt/stimulus-reveal-controller.svg" />
+        </a>
+
+        <a href="https://www.npmjs.com/package/stimulus-reveal-controller">
+          <img src="https://img.shields.io/npm/v/stimulus-reveal-controller.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-reveal-controller">
+          <img src="https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Lint/badge.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-reveal-controller">
+          <img src="https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Test/badge.svg" />
+        </a>
+
+        <a href="https://github.com/stimulus-components/stimulus-reveal-controller">
+          <img src="https://img.shields.io/github/license/stimulus-components/stimulus-reveal-controller.svg" />
+        </a>
+
+        <a href="https://stimulus-reveal-controller.netlify.com/">
+          <img src="https://api.netlify.com/api/v1/badges/c21b3ca7-40fa-4de3-aad5-56dbc343ace6/deploy-status" />
+        </a>
+      </p>
+
+      <h2 class="text-center text-2xl font-bold my-4">Essential links</h2>
+
+      <ul class="text-center mb-8">
+        <li>
+          <a href="https://github.com/stimulus-components/stimulus-reveal-controller" target="_blank" rel="noopener">
+            Github
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.npmjs.com/package/stimulus-reveal-controller" target="_blank" rel="noopener">
+            Npm
+          </a>
+        </li>
+      </ul>
+
+      <div data-controller="reveal" class="mt-16">
+        <button
+          id="toggle-button"
+          data-action="click->reveal#toggle"
+          type="button"
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+        >
+          Toggle me!
+        </button>
+
+        <p id="toggle-target" data-target="reveal.item" class="hidden mt-4">
+          Hey 👋
+        </p>
+      </div>
+
+      <div data-controller="reveal" class="mt-4">
+        <button
+          id="toggle-button"
+          data-action="click->reveal#hide"
+          type="button"
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+        >
+          Hide me!
+        </button>
+
+        <p id="toggle-target" data-target="reveal.item" class="mt-4">
+          Hey 🙈
+        </p>
+      </div>
+
+      <div data-controller="reveal" class="mt-4">
+        <button
+          id="toggle-button"
+          data-action="click->reveal#show"
+          type="button"
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+        >
+          Show me!
+        </button>
+
+        <p id="toggle-target" data-target="reveal.item" class="hidden mt-4">
+          Hi 🐵
+        </p>
+      </div>
+    </section>
+    </div>
+  </body>
+</html>
