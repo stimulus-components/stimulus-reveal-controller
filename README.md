@@ -13,7 +13,7 @@ A Stimulus controller to toggle a class on one or multiple items to show or hide
 
 ## 📚 Documentation
 
-See [stimulus-timeago documentation](https://stimulus-components.netlify.app/docs/components/stimulus-timeago/).
+See [stimulus-reveal-controller documentation](https://stimulus-components.netlify.app/docs/components/stimulus-reveal-controller/).
 
 ## 👷‍♂️ Contributing
 
