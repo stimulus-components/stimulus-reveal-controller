@@ -1,6 +1,6 @@
 {
   "name": "stimulus-reveal-controller",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Stimulus controller to toggle a class on one or multiple items to show or hide them.",
   "repository": "git@github.com:stimulus-components/stimulus-reveal-controller.git",
   "author": "Guillaume Briday <guillaumebriday@gmail.com>",
