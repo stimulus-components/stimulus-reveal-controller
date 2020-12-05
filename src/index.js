@@ -2,26 +2,27 @@ import { Controller } from 'stimulus'
 
 export default class extends Controller {
   static targets = ['item']
+  static classes = ['hidden']
 
   connect () {
-    this.hiddenClass = this.data.get('hiddenClass') || 'hidden'
+    this.class = this.hasHiddenClass ? this.hiddenClass : 'hidden'
   }
 
   toggle () {
     this.itemTargets.forEach(item => {
-      item.classList.toggle(this.hiddenClass)
+      item.classList.toggle(this.class)
     })
   }
 
   show () {
     this.itemTargets.forEach(item => {
-      item.classList.remove(this.hiddenClass)
+      item.classList.remove(this.class)
     })
   }
 
   hide () {
     this.itemTargets.forEach(item => {
-      item.classList.add(this.hiddenClass)
+      item.classList.add(this.class)
     })
   }
 }
