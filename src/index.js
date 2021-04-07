@@ -1,4 +1,5 @@
 import { Controller } from 'stimulus'
+import { useTransition } from 'stimulus-use'
 
 export default class extends Controller {
   static targets = ['item']
@@ -6,23 +7,23 @@ export default class extends Controller {
 
   connect () {
     this.class = this.hasHiddenClass ? this.hiddenClass : 'hidden'
+
+    useTransition(this, {
+      element: this.itemTarget,
+      hiddenClass: this.class,
+      transitioned: !this.itemTarget.classList.contains(this.class)
+    })
   }
 
   toggle () {
-    this.itemTargets.forEach(item => {
-      item.classList.toggle(this.class)
-    })
+    this.toggleTransition()
   }
 
   show () {
-    this.itemTargets.forEach(item => {
-      item.classList.remove(this.class)
-    })
+    this.enter()
   }
 
   hide () {
-    this.itemTargets.forEach(item => {
-      item.classList.add(this.class)
-    })
+    this.leave()
   }
 }
