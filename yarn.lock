@@ -7589,6 +7589,11 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
+stimulus-use@^0.24.0-1:
+  version "0.24.0-1"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.24.0-1.tgz#ebf029966b9ed7e251c0b45bdf686a30deee8f3d"
+  integrity sha512-Q1YUxYBPkx2Gn1jurKAEGc98MUyX+gsmV+knRON3dqg8kumg3faN8IClUH9cj2i5k45TqBumEMDSbteAQ0IeaQ==
+
 stimulus@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-2.0.0.tgz#713c8b91a72ef90914b90955f0e705f004403047"

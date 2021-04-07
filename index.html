@@ -132,7 +132,6 @@
 
     <div class="relative h-full max-w-5xl mx-auto px-4">
       <section class="mt-16">
-        <!-- Toggle reveal controller -->
         <div data-controller="reveal">
           <button
             id="toggle-button"
@@ -143,55 +142,22 @@
             Toggle me!
           </button>
 
-          <p id="toggle-target" class="hidden mt-4" data-reveal-target="item">
+          <p
+            id="toggle-target"
+            class="hidden mt-4"
+            data-reveal-target="item"
+            data-transition-enter-active="transition ease-out duration-300"
+            data-transition-enter-from="transform opacity-0 scale-95"
+            data-transition-enter-to="transform opacity-100 scale-100"
+            data-transition-leave-active="transition ease-in duration-300"
+            data-transition-leave-from="transform opacity-100 scale-100"
+            data-transition-leave-to="transform opacity-0 scale-95"
+          >
             Hey 👋
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4"
-            data-reveal-target="item"
-            data-transition-show="transition-opacity ease-linear duration-1000"
-            data-transition-show-start="opacity-0"
-            data-transition-show-end="opacity-100"
-            data-transition-hide="transition-opacity ease-linear duration-1000"
-            data-transition-hide-start="opacity-100"
-            data-transition-hide-end="opacity-0"
-          >
-            Hey With Animation 👋
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4"
-            data-reveal-target="item"
-            data-transition-show="transition ease-linear duration-700 transform"
-            data-transition-show-start="-translate-x-1/2"
-            data-transition-show-end="translate-x-0"
-            data-transition-hide="transition ease-linear duration-700 transform"
-            data-transition-hide-start="translate-x-0"
-            data-transition-hide-end="-translate-x-1/2"
-          >
-            Hey Again With Animation 👋
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4 transform translate-x-8"
-            data-reveal-target="item"
-            data-transition-show="transition ease-linear duration-1000 transform"
-            data-transition-show-start="-translate-x-1/2"
-            data-transition-show-end="translate-x-8"
-            data-transition-hide="transition ease-linear duration-1000 transform"
-            data-transition-hide-start="translate-x-8"
-            data-transition-hide-end="-translate-x-1/2"
-          >
-            Hi Again With Transition and keep original classes 🐵
           </p>
         </div>
 
-        <!-- Hide reveal controller -->
-        <div class="mt-4" data-controller="reveal">
+        <div data-controller="reveal" class="mt-4">
           <button
             id="toggle-button"
             data-action="click->reveal#hide"
@@ -201,45 +167,51 @@
             Hide me!
           </button>
 
-          <p id="toggle-target" data-reveal-target="item" class="mt-4">
+          <p
+            id="toggle-target"
+            class="mt-4"
+            data-reveal-target="item"
+            data-transition-leave-active="transition ease-in duration-300"
+            data-transition-leave-from="transform opacity-100 scale-100"
+            data-transition-leave-to="transform opacity-0 scale-95"
+          >
             Hey 🙈
-          </p>
-
-          <p
-            id="toggle-target"
-            class="mt-4"
-            data-reveal-target="item"
-            data-transition-hide="transition-opacity ease-linear duration-1000"
-            data-transition-hide-start="opacity-100"
-            data-transition-hide-end="opacity-0"
-          >
-            Hey With Transistion 🙈
-          </p>
-
-          <p
-            id="toggle-target"
-            class="mt-4"
-            data-reveal-target="item"
-            data-transition-hide="transition ease-linear duration-700 transform"
-            data-transition-hide-start="translate-x-0"
-            data-transition-hide-end="-translate-x-1/2"
-          >
-            Hey Again With Transistion 🙈
-          </p>
-
-          <p
-            id="toggle-target"
-            class="mt-4 transform translate-x-8"
-            data-reveal-target="item"
-            data-transition-hide="transition ease-linear duration-1000 transform"
-            data-transition-hide-start="translate-x-8"
-            data-transition-hide-end="-translate-x-1/2"
-          >
-            Hi Again With Transition and keep original classes 🐵
           </p>
         </div>
 
-        <!-- Show reveal controller -->
+        <div data-controller="reveal" class="mt-4">
+          <button
+            id="toggle-button"
+            data-action="click->reveal#hide"
+            type="button"
+            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border rounded shadow"
+          >
+            Hide me! Multiple Targets!
+          </button>
+
+          <p
+            id="toggle-target"
+            class="mt-4"
+            data-reveal-target="item"
+            data-transition-leave-active="transition ease-in duration-300"
+            data-transition-leave-from="transform opacity-100 scale-100"
+            data-transition-leave-to="transform opacity-0 scale-95"
+          >
+            Hey 🙈 | This will work!
+          </p>
+
+          <p
+            id="toggle-target"
+            class="mt-4"
+            data-reveal-target="item"
+            data-transition-leave-active="transition ease-in duration-300"
+            data-transition-leave-from="transform opacity-100 scale-100"
+            data-transition-leave-to="transform opacity-0 scale-95"
+          >
+            Hey 🙈 | This wont work!
+          </p>
+        </div>
+
         <div data-controller="reveal" class="mt-4">
           <button
             id="toggle-button"
@@ -250,41 +222,15 @@
             Show me!
           </button>
 
-          <p id="toggle-target" class="hidden mt-4" data-reveal-target="item">
+          <p
+            id="toggle-target"
+            class="hidden mt-4"
+            data-reveal-target="item"
+            data-transition-enter-active="transition ease-out duration-300"
+            data-transition-enter-from="transform opacity-0 scale-95"
+            data-transition-enter-to="transform opacity-100 scale-100"
+          >
             Hi 🐵
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4"
-            data-reveal-target="item"
-            data-transition-show="transition-opacity ease-linear duration-1000"
-            data-transition-show-start="opacity-0"
-            data-transition-show-end="opacity-100"
-          >
-            Hi With Transition 🐵
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4"
-            data-reveal-target="item"
-            data-transition-show="transition ease-linear duration-700 transform"
-            data-transition-show-start="-translate-x-1/2"
-            data-transition-show-end="translate-x-0"
-          >
-            Hi Again With Transition 🐵
-          </p>
-
-          <p
-            id="toggle-target"
-            class="hidden mt-4 transform translate-x-8"
-            data-reveal-target="item"
-            data-transition-show="transition ease-linear duration-1000 transform"
-            data-transition-show-start="-translate-x-1/2"
-            data-transition-show-end="translate-x-8"
-          >
-            Hi Again With Transition and keep original classes 🐵
           </p>
         </div>
       </section>
