@@ -1,4 +1,4 @@
-import { Application } from 'stimulus'
+import { Application } from '@hotwired/stimulus'
 import Reveal from '../src/index'
 
 const startStimulus = (): void => {
