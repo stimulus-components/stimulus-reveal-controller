@@ -5,7 +5,7 @@
 [![](https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
 [![](https://github.com/stimulus-components/stimulus-reveal-controller/workflows/Test/badge.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-reveal-controller.svg)](https://github.com/stimulus-components/stimulus-reveal-controller)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/83f0dddb-31fa-4025-a04f-dd26f153d646/deploy-status)](https://stimulus-reveal-controller.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/83f0dddb-31fa-4025-a04f-dd26f153d646/deploy-status)](https://stimulus-reveal-controller.stimulus-components.com/)
 
 ## Getting started
 
@@ -13,7 +13,7 @@ A Stimulus controller to toggle a class on one or multiple items to show or hide
 
 ## 📚 Documentation
 
-See [stimulus-reveal-controller documentation](https://stimulus-components.netlify.app/docs/components/stimulus-reveal-controller/).
+See [stimulus-reveal-controller documentation](https://www.stimulus-components.com/docs/stimulus-reveal-controller/).
 
 ## 👷‍♂️ Contributing
 
