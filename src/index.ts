@@ -13,19 +13,25 @@ export default class extends Controller {
     this.class = this.hasHiddenClass ? this.hiddenClass : 'hidden'
   }
 
-  toggle (): void {
+  toggle (e): void {
+    e.currentTarget.setAttribute('aria-expanded', String(e.currentTarget.getAttribute('aria-expanded') !== 'true'))
+
     this.itemTargets.forEach(item => {
       item.classList.toggle(this.class)
     })
   }
 
-  show (): void {
+  show (e): void {
+    e.currentTarget.setAttribute('aria-expanded', 'true')
+
     this.itemTargets.forEach(item => {
       item.classList.remove(this.class)
     })
   }
 
-  hide (): void {
+  hide (e): void {
+    e.currentTarget.setAttribute('aria-expanded', 'false')
+
     this.itemTargets.forEach(item => {
       item.classList.add(this.class)
     })
