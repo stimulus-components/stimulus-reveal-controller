@@ -1,9 +1,13 @@
-import { Application } from '@hotwired/stimulus'
-import Reveal from '../src/index'
+/**
+ * @jest-environment jsdom
+ */
+
+import { Application } from "@hotwired/stimulus"
+import Reveal from "../src/index"
 
 const startStimulus = (): void => {
   const application = Application.start()
-  application.register('reveal', Reveal)
+  application.register("reveal", Reveal)
 }
 
 beforeEach((): void => {
@@ -17,15 +21,15 @@ beforeEach((): void => {
   `
 })
 
-describe('#toggle', () => {
-  it('should reveal the target', () => {
-    const button: HTMLButtonElement = document.querySelector('button')
-    const hidden: HTMLElement = document.querySelector('p')
+describe("#toggle", () => {
+  it("should reveal the target", () => {
+    const button: HTMLButtonElement = document.querySelector("button")
+    const hidden: HTMLElement = document.querySelector("p")
 
-    expect(hidden.className).toContain('hidden')
+    expect(hidden.className).toContain("hidden")
     button.click()
-    expect(hidden.className).not.toContain('hidden')
+    expect(hidden.className).not.toContain("hidden")
     button.click()
-    expect(hidden.className).toContain('hidden')
+    expect(hidden.className).toContain("hidden")
   })
 })

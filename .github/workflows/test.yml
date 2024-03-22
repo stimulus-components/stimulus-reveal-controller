@@ -1,17 +1,18 @@
-name: Lint
+name: Test
 
 on: [push]
 
 jobs:
-  eslint:
+  jest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version-file: '.node-version'
-          cache: 'yarn'
-      - run: |
+          node-version-file: ".node-version"
+          cache: "yarn"
+      - name: test
+        run: |
           yarn install --silent --non-interactive
           yarn test
         env:
