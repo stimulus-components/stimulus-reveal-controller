@@ -11,11 +11,28 @@ export default class Reveal extends Controller {
 
   connect(): void {
     this.class = this.hasHiddenClass ? this.hiddenClass : "hidden"
+    this.restoreState()
   }
 
   toggle(): void {
     this.itemTargets.forEach((item) => {
       item.classList.toggle(this.class)
+      this.saveState(item)
+    })
+  }
+
+  saveState(item: HTMLElement): void {
+    if (!item.dataset.revealStoreId) return
+    const isHidden = item.classList.contains(this.class)
+    sessionStorage.setItem(`reveal-${item.dataset.revealStoreId}`, isHidden ? "false" : "true")
+  }
+
+  restoreState() {
+    this.itemTargets.forEach((item) => {
+      const storedValue = sessionStorage.getItem(`reveal-${item.dataset.revealStoreId}`)
+      if (!storedValue) return
+      const shouldHide = storedValue === "false"
+      item.classList.toggle(this.class, shouldHide)
     })
   }
 

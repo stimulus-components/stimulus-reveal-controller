@@ -117,8 +117,8 @@
       </div>
     </div>
 
-    <div class="relative h-full max-w-5xl mx-auto px-4">
-      <section class="mt-16">
+    <div class="flex justify-center relative h-full max-w-5xl mx-auto px-4">
+      <section class="mt-16 grid grid-cols-2 gap-4">
         <div data-controller="reveal">
           <button
             id="toggle-button"
@@ -132,7 +132,7 @@
           <p id="toggle-target" data-reveal-target="item" class="hidden mt-4">Hey 👋</p>
         </div>
 
-        <div data-controller="reveal" class="mt-4">
+        <div data-controller="reveal">
           <button
             id="toggle-button"
             data-action="click->reveal#hide"
@@ -142,10 +142,10 @@
             Hide me!
           </button>
 
-          <p id="toggle-target" data-reveal-target="item" class="mt-4">Hey 🙈</p>
+          <p id="toggle-target" data-reveal-target="item">Hey 🙈</p>
         </div>
 
-        <div data-controller="reveal" class="mt-4">
+        <div data-controller="reveal">
           <button
             id="toggle-button"
             data-action="click->reveal#show"
@@ -156,6 +156,15 @@
           </button>
 
           <p id="toggle-target" data-reveal-target="item" class="hidden mt-4">Hi 🐵</p>
+        </div>
+
+        <div data-controller="reveal">
+          <button id="toggle-button" data-action="click->reveal#toggle" type="button"
+            class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border rounded shadow">
+            Save me!
+          </button>
+        
+          <p id="toggle-target" data-reveal-target="item" data-reveal-store-id="unique-ID" class="hidden mt-4">Hey 👀</p>
         </div>
       </section>
     </div>
